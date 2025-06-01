@@ -1,0 +1,22 @@
+[project]
+name = "grimwalker"
+version = "0.0.0"
+description = "a game framework that's level of beauty is -1 times that of Hunter Clawthorne Noceda"
+authors = [
+    {name = "oriinafloresta",email = "e@e.e"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pysdl2 (>=0.9.17,<0.10.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [
+    {include = "grimwalker"}
