@@ -1,6 +1,6 @@
 import sdl2, sdl2.ext
 from grimwalker import display
-from grimwalker.util.registry import Registry
+from grimwalker.util.registry import *
 
 _displayManager = display.GrimDisplayManager
 _registry = Registry()
@@ -30,7 +30,6 @@ def init():
 class Grimwalker:
 	def __init__():
 		self._displayManager = display.GrimDisplayManager()
-		self._registry = Registry()
 		self._running = False
 
 	@property
@@ -40,13 +39,3 @@ class Grimwalker:
 	@displayManager.setter
 	def displayManager(self):
 		raise AttributeError("Grimwalker.displayManager is immutable.")
-
-	@property
-	def registry(self):
-		return self._registry
-	
-	@registry.setter
-	def registry(self, val):
-		# TODO: once logger set up, print a warning
-		# (also check if this applies to changing things INSIDE the registry and not just the overall reg variable itself)
-		self._registry = val
