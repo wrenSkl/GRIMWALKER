@@ -9,7 +9,7 @@ class Signal:
 
 	def __get_target(self):
 		if self._target_uid:
-			return globals.uids[self._target_uid]
+			return uids[self._target_uid]
 		else:
 			raise AttributeError("grimwalker.util.signal.Signal._target_uid does not exist or is an invalid type")
 
